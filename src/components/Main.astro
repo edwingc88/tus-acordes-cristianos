@@ -1,0 +1,376 @@
+---
+import StartIcon from "./icons/StartIcon.astro";
+import SearchIcon from "./icons/SearchIcon.astro";
+import CorazonIcon from "./icons/CorazonIcon.astro";
+import AlabanzaIcon from "./icons/AlabanzaIcon.astro";
+import MicrophoneIcon from "./icons/MicrophoneIcon.astro";
+import HeadPhones from "./icons/HeadPhones.astro";
+import BellIcon from "./icons/BellIcon.astro";
+import CategoryIcon from "./icons/CategoryIcon.astro";
+import PlaylistIcon from "./icons/PlaylistIcon.astro";
+import ArtistasIcon from "./icons/ArtistasIcon.astro";
+---
+
+<!-- Hero Section -->
+<section class="hero text-center py-10 px-20 relative">
+  <div
+    class="badge inline-flex items-center gap-2 bg-white rounded-2xl shadow-[0_2px_8px_rgba(0,0,0,0.05)] text-xs px-4 py-2 font-extrabold text-text-light mb-6 uppercase"
+  >
+    <StartIcon class="w-6 h-6 stroke-current text-accent" />Recursos para el
+    músico cristiano
+  </div>
+  <h2
+    class="text-primary text-[clamp(2.5rem,5vw,4.5rem)] leading-tight mb-5 font-bold"
+  >
+    Exalta a Dios con gratitud <span
+      class="bg-linear-to-r from-secondary to-primary bg-clip-text text-transparent"
+    >
+      y alabanza</span
+    >
+  </h2>
+  <p class="text-lg text-text-light max-w-162.5 mx-auto mb-10 leading-relaxed">
+    Encuentra acordes, letras y escalas para guitarra y piano de tus canciones
+    cristianas favoritas en un solo lugar.
+  </p>
+  <div class="search-container max-w-3xl mx-auto relative p-1">
+    <SearchIcon
+      class="stroke-current absolute left-6 top-1/2 -translate-y-1/2 text-text-light"
+    />
+    <input
+      type="text"
+      class="search-bar w-full py-5 pr-7 pl-16 border border-slate-200 rounded-4xl shadow-[0_20px_40px_rgba(0,0,0,0.05)] outline-none transition-all focus:border-secondary focus:shadow-[0_20px_40px_rgba(59,138,142,0.1)]"
+      placeholder="Buscar canción, artista o tono..."
+    />
+    <button
+      class="btn-search absolute right-3 top-1/2 -translate-y-1/2 bg-secondary text-white border-none py-3 px-7 rounded-4xl font-extrabold cursor-pointer hover:bg-primary"
+      >Buscar</button
+    >
+  </div>
+
+  <div class="list-artist mt-14 w-full max-w-300 mx-auto">
+    <h2 class="text-2xl font-bold text-primary mb-6">Todos los Artistas</h2>
+    <ul class="flex flex-wrap lg:flex-nowrap gap-1 justify-center">
+      {
+        [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z",
+        ].map((letter) => (
+          <li>
+            <a
+              href={`#${letter}`}
+              class="w-9 h-9 flex items-center justify-center border border-slate-200 rounded text-primary text-sm font-bold hover:bg-secondary hover:text-white hover:border-secondary transition-all"
+            >
+              {letter}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
+
+<!-- Categorias Section -->
+<section class="w-[90%] max-w-7xl mx-auto pb-14 mt-10">
+  <div class="flex justify-between items-center mb-7">
+    <h3 class="text-2xl font-extrabold text-primary flex items-center gap-3">
+      <CategoryIcon /> Categorías de Canciones
+    </h3>
+    <a href="/songs" class="text-secondary font-bold decoration-none"
+      >Ver todas</a
+    >
+  </div>
+  <div class="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-5">
+    <div
+      class="bg-white p-7 rounded-3xl border border-[#f1f5f9] text-left cursor-pointer transition-all shadow-[0_4px_6px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1)] hover:border-secondary"
+    >
+      <div class="cat-icon" style="background: #fff1f2; color: #f43f5e;">
+        <CorazonIcon />
+      </div>
+      <h4>Adoración</h4>
+      <p>Ritmos lentos, profundos y reflexivos</p>
+    </div>
+    <div
+      class="bg-white p-7 rounded-3xl border border-[#f1f5f9] text-left cursor-pointer transition-all shadow-[0_4px_6px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1)] hover:border-secondary"
+    >
+      <div class="cat-icon" style="background: #eff6ff; color: #3b82f6;">
+        <AlabanzaIcon />
+      </div>
+      <h4>Alabanza</h4>
+      <p>Ritmos alegres y jubilo</p>
+    </div>
+    <div
+      class="bg-white p-7 rounded-3xl border border-[#f1f5f9] text-left cursor-pointer transition-all shadow-[0_4px_6px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1)] hover:border-secondary"
+    >
+      <div class="cat-icon" style="background: #fffbeb; color: #f59e0b;">
+        <MicrophoneIcon />
+      </div>
+      <h4>Coritos</h4>
+      <p>Himnos y Cantos tradicionales repetitivos</p>
+    </div>
+    <div
+      class="bg-white p-7 rounded-3xl border border-[#f1f5f9] text-left cursor-pointer transition-all shadow-[0_4px_6px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1)] hover:border-secondary"
+    >
+      <div class="cat-icon" style="background: #f5f3ff; color: #8b5cf6;">
+        <HeadPhones />
+      </div>
+      <h4>Urbano</h4>
+      <p>Rap, trap y reguetón con mensaje cristiano</p>
+    </div>
+    <div
+      class="bg-white p-7 rounded-3xl border border-[#f1f5f9] text-left cursor-pointer transition-all shadow-[0_4px_6px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1)] hover:border-secondary"
+    >
+      <div class="cat-icon" style="background: #f5f3ff; color: #8b5cf6;">
+        <BellIcon />
+      </div>
+      <h4>Novedades</h4>
+      <p>Lanzamientos recientes</p>
+    </div>
+  </div>
+</section>
+
+<!--Artistas destacados /Bento Estilo -->
+<section class="w-[90%] max-w-7xl mx-auto">
+  <div class="flex justify-between items-center mb-8">
+    <h3 class="text-primary font-extrabold flex items-center gap-3 text-2xl">
+      <ArtistasIcon /> Artistas Destacados
+    </h3>
+    <a href="#" class="text-secondary font-bold decoration-none">Ver todos</a>
+  </div>
+  <div class="grid gap-5 grid-cols-4 grid-rows-[repeat(2,220px)]">
+    <div class="relative rounded-4xl overflow-hidden cursor-pointer group big">
+      <img
+        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        src="/public/monte-santo.webp"
+        alt="Miel San Marcos"
+      />
+      <div class="bento-overlay">
+        <h4>Monte Santo</h4>
+        <span>78 canciones disponibles</span>
+      </div>
+    </div>
+    <div class="relative rounded-4xl overflow-hidden cursor-pointer group">
+      <img
+        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        src="/public/averly.webp"
+        alt="Christine"
+      />
+      <div
+        class="absolute inset-0 flex flex-col content-end p-7 text-white bg-linear-to-t from-black/80 to-transparent to-60%"
+      >
+        <h4>Averly Morillo</h4>
+        <span>Ver acordes</span>
+      </div>
+    </div>
+    <div class="relative rounded-4xl overflow-hidden cursor-pointer group">
+      <img
+        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        src="/public/oasis-ministry.webp"
+        alt="Marcos Witt"
+      />
+      <div class="bento-overlay">
+        <h4>Oasis Ministry</h4>
+        <span>Ver acordes</span>
+      </div>
+    </div>
+    <div class="relative rounded-4xl overflow-hidden cursor-pointer group wide">
+      <img
+        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        src="/public/Grupo-Barak.webp"
+        alt="Barak"
+      />
+      <div class="bento-overlay">
+        <h4>Grupo Barak</h4>
+        <span>Ministerio de Alabanza</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Playlist Section -->
+<section class="py-24 px-0 rounded-[80px_80px_0_0] text-white mt-20 bg-primary">
+  <div class="section-container w-[90%] max-w-7xl mx-auto pb-6">
+    <div class="playlists-header">
+      <div>
+        <h2 style="font-size: 40px; font-weight: 800; margin-bottom: 10px;">
+          Tus Playlists
+        </h2>
+        <p style="opacity: 0.7;">
+          Organiza tus repertorios para los ensayos y servicios dominicales.
+        </p>
+      </div>
+      <a
+        href="#"
+        class="bg-white text-primary py-3.5 px-8 rounded-2xl decoration-0 font-extrabold transition-all duration-300 hover:bg-secondary hover:text-white"
+        >Crear Nueva Playlist</a
+      >
+    </div>
+    <div class="grid gap-7 grid-cols-[repeat(auto-fit,minmax(300px,1fr))]">
+      <div class="playlist-card">
+        <PlaylistIcon />
+        <h5>Favoritos Domingo</h5>
+        <p>12 canciones • Adoración</p>
+      </div>
+      <div class="playlist-card">
+        <PlaylistIcon />
+        <h5>Tiempo de Oración</h5>
+        <p>25 canciones • Instrumental</p>
+      </div>
+      <div class="playlist-card">
+        <PlaylistIcon />
+        <h5>Especial de Navidad</h5>
+        <p>8 canciones • Eventos</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(
+      circle,
+      rgba(59, 138, 142, 0.1) 0%,
+      transparent 70%
+    );
+    z-index: -1;
+  }
+
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .category-card {
+    background: white;
+    padding: 30px;
+    border-radius: 30px;
+    border: 1px solid #f1f5f9;
+    text-align: left;
+    transition: all 0.3s;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  }
+
+  .category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+    border-color: var(--secondary);
+  }
+
+  .cat-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .category-card h4 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: var(--text-dark);
+  }
+  .category-card p {
+    color: var(--text-light);
+    font-size: 14px;
+  }
+
+  /* Estilo Bento de Artistas */
+
+  .bento-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 60%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px;
+    color: white;
+  }
+
+  .bento-overlay h4 {
+    font-size: 24px;
+    font-weight: 800;
+  }
+  .bento-overlay span {
+    font-size: 14px;
+    opacity: 0.7;
+  }
+
+  .big {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  .wide {
+    grid-column: span 2;
+  }
+
+  /* Playlists Section */
+
+  .playlists-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+  }
+
+  .playlist-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 40px;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+
+  .playlist-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.02);
+  }
+
+  .pl-icon {
+    color: var(--secondary);
+    margin-bottom: 30px;
+  }
+  .playlist-card h5 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  .playlist-card p {
+    opacity: 0.5;
+    font-size: 14px;
+  }
+</style>

@@ -1,0 +1,94 @@
+---
+import Logotipo from "@/components/Logotipo.astro";
+---
+
+<footer class="bg-white pt-16 pb-8 border-t border-[#e2e8f077]">
+  <div
+    class="w-[90%] max-w-7xl mx-auto grid gap-12 mb-12 grid-cols-[2fr_1fr_1fr]"
+  >
+    <div class="footer-col">
+      <!--       <div class="logo">
+        <a href="#" class="flex items-center gap-1.5 cursor-pointer">
+          <div
+            class="w-24 h-24 bg-gradient-primary flex justify-between text-white relative"
+          >
+            <img src="/public/tus.png" alt="Logo" />
+          </div>
+          <div class="flex flex-col justify-center">
+            <h1
+              class="text-3xl font-bold text-primary leading-none tracking-[1px]"
+            >
+              ACORDES
+            </h1>
+            <span class="text-2xl font-semibold text-secondary tracking-[1px]"
+              >CRISTIANOS</span
+            >
+          </div>
+        </a>
+      </div> -->
+
+      <Logotipo scale="scale-180" className="mt-4" />
+      <p class="mt-6" style="color: var(--text-light); line-height: 1.6;">
+        Llevamos la música de alabanza al siguiente nivel, ayudando a cada
+        músico a adorar con excelencia.
+      </p>
+    </div>
+    <div class="footer-col">
+      <h4>Explorar</h4>
+      <ul>
+        <li><a href="/artist">Artistas</a></li>
+        <li><a href="#">Canciones Populares</a></li>
+        <li><a href="#">Tutoriales de Piano</a></li>
+        <li><a href="#">Diagramas de Guitarra</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Comunidad</h4>
+      <ul>
+        <li><a href="#">Inscribir Ministerio</a></li>
+        <li><a href="#">Donaciones</a></li>
+        <li><a href="#">Soporte Técnico</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="w-[90%] max-w-7xl mx-auto footer-bottom">
+    <p>© 2024 Escalas Cristianas. Inspirando la adoración mundial.</p>
+    <div style="display: flex; gap: 20px;">
+      <a href="#" style="color: inherit; text-decoration: none;">Privacidad</a>
+      <a href="#" style="color: inherit; text-decoration: none;">Términos</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  /* Footer */
+
+  .footer-col h4 {
+    margin-bottom: 25px;
+    font-weight: 800;
+  }
+  .footer-col ul {
+    list-style: none;
+  }
+  .footer-col ul li {
+    margin-bottom: 15px;
+  }
+  .footer-col ul li a {
+    text-decoration: none;
+    color: var(--text-light);
+    transition: color 0.3s;
+  }
+  .footer-col ul li a:hover {
+    color: var(--secondary);
+  }
+
+  .footer-bottom {
+    padding-top: 30px;
+    border-top: 1px solid #f1f5f9;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #94a3b8;
+  }
+</style>

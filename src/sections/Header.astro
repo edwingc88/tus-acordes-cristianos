@@ -1,0 +1,32 @@
+---
+import Logotipo from "@/components/Logotipo.astro";
+import PlaylistIcon from "../components/icons/PlaylistIcon.astro";
+import UserIcon from "../components/icons/UserIcon.astro";
+import Search from "../components/Search.astro";
+---
+
+<header
+  class="sticky top-0 bg-white/80 backdrop-blur-md h-20 flex items-center py-2 border-b border-slate-200 z-50"
+>
+  <nav class="w-[90%] max-w-7xl m-auto flex justify-between align-middle">
+    <div class="search flex gap-x-5 max-w-xl flex-1">
+      <Logotipo />
+      <Search />
+    </div>
+
+    <div
+      class="nav-links flex items-center justify-center content-center gap-7"
+    >
+      <a
+        href="#"
+        class="nav-link decoration-0 text-text-light font-semibold flex align-middle gap-2 transition-colors hover:text-primary group"
+        ><PlaylistIcon class="w-6 h-6 stroke-current" />Playlists</a
+      >
+      <a
+        href="/login"
+        class="btn-login bg-primary text-white px-6 py-3 text-bold flex gap-2 transition-all rounded-4xl font-semibold"
+        ><UserIcon class="w-6 h-6 stroke-current" />Iniciar Sesión</a
+      >
+    </div>
+  </nav>
+</header>
