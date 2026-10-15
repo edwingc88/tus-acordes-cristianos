@@ -10,10 +10,10 @@ export default defineConfig([
     files: ["**/*.astro"],
     languageOptions: {
       parser: "astro-eslint-parser",
-      parserOptions: {
+/*       parserOptions: {
         parser: "@typescript-eslint/parser",
         extraFileExtensions: [".astro"],
-      },
+      }, */
     },
   },
   {
